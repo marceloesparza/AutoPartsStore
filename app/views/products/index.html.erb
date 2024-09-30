@@ -1,0 +1,23 @@
+<h1>Lista de Productos</h1>
+<%= link_to "Agregar Producto", new_product_path %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @products.each do |product| %>
+            <tr>
+                <td><%= product.name %></td>
+                <td><%= product.description %></td>
+                <td><%= product.price %></td>
+                <td><%= product.stock %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
